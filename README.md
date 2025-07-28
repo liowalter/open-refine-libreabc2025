@@ -18,7 +18,7 @@ Si possible, merci de procéder aux étapes suivantes avant l'atelier.
 ### Essentiel
 
 - Installer [OpenRefine 3.9.3](https://openrefine.org/download)
-- Installer l'extension [AI Extension for OpenRefine](https://github.com/sunilnatraj/llm-extension/releases) (testé avec la version 0.1.2.3). En cas de besoin, se référer à la [documentation OpenRefine sur l'installation des extensions](https://openrefine.org/docs/manual/installing#installing-extensions).
+- Installer l'extension [AI Extension for OpenRefine](https://github.com/sunilnatraj/llm-extension) (testé avec la version 0.1.2.3). En cas de besoin, se référer à la [documentation OpenRefine sur l'installation des extensions](https://openrefine.org/docs/manual/installing#installing-extensions).
 - Télécharger les [jeux de données disponibles](https://github.com/liowalter/open-refine-libreabc2025/tree/main/data)
 
 ### Optionnel

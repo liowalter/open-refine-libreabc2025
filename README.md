@@ -26,6 +26,45 @@ Si possible, merci de procéder aux étapes suivantes avant l'atelier.
 
 ### Optionnel
 
-- Créer un compte chez Infomaniak et [activer le test gratuit permettant de bénéficier de 1M](https://www.infomaniak.com/fr/hebergement/ai-tools) de crédits offerts pour l'utilisation d'IA souveraines et "open source"
-- Si votre institution ou vous-même bénéficiez d'un outil IA de type ChatGPT, essayez de trouver la clé API vous permettant d'utiliser ces services directement en mode machine (par exemple avec ChatGPT cela se passe sur https://platform.openai.com/api-keys)
-- Installer le logiciel [Ollama](https://ollama.com/) qui permet de faire tourner des modèles IA sur votre propre machine. 
+Une clé API sera fournie lors de l'atelier pour vous permettre d'effectuer quelques requêtes auprès d'une IA.
+Cependant, nous vous conseillons d'obtenir votre propre clé pour vous permettre de continuer à l'utiliser après l'atelier.
+
+Voici quelques options (du plus simple au plus complexe):
+
+#### 1. Utiliser une IA hébergée en Suisse par Infomaniak (test gratuit)
+Cette option permet d'utiliser plusieurs modèles d'IA performants et "ouverts" hébergés en Suisse chez Infomaniak.
+C'est un bon compromis entre performance et respect de la vie privée (les données restent en Suisse).
+
+L'utilisation des IA d'Infomaniak est payante, mais il est possible d'[activer un test gratuit permettant de bénéficier de 1M](https://www.infomaniak.com/fr/hebergement/ai-tools) de crédits. 
+
+Les informations suivantes seront ensuite nécessaires pour utiliser votre compte Infomaniak depuis OpenRefine:
+- Votre **Product ID**
+- Une clé **token API**
+
+Vous trouverez voutre **Product ID** dans le tableau de bord Infomaniak, onglet "AI Tools":
+
+![Comment trouver le Product ID dans l'interface Infomaniak.](img/produt-id-screenshot.png)
+
+Pour créer un "token API", cliquez sur le lien "Gérer" de votre tableau de bord et créez une nouvelle clé
+en choisissant **ai-tools** dans le menu "Scopes":
+
+![Comment générer un token API dans Infomaniak.](img/token-api-screenshot.png)
+
+Copiez la clé ainsi générée dans un document texte par exemple, vous en aurez besoin pour configurer l'extension et
+elle ne s'affichera plus une fois la fenêtre fermée.
+
+#### 2. Utiliser une IA propriétaire (payant)
+Si votre institution ou vous-même bénéficiez d'un outil IA de type ChatGPT, essayez d'obtenir une clé API vous permettant d'utiliser ces services directement en mode machine (par exemple avec ChatGPT cela se passe sur https://platform.openai.com/api-keys). C'est l'option la plus simple et la plus performante, mais payante et les donnés seront envoyées aux serveurs d'OpenAI hors de Suisse.
+
+Attention, un compte ChatGPT gratuit ne permet pas cette option, il faut un compte payant ou institutionnel.
+
+#### 3. Utiliser un modèle en local sur votre machine (gratuit)
+Installer le logiciel [Ollama](https://ollama.com/) qui permet de faire tourner des modèles IA sur votre propre machine.
+Cette option est entièrement gratuite et toutes les données transmises au modèle resteront sur votre ordinateur.
+Cependant, la qualité du résultat et la vitesse de réponse dépendront de la puissance de votre processeur.
+
+**Important** si vous voulez utiliser Ollama lors de l'atelier, chargez le modèle llama3.2 sur votre machine avant l'atelier (cela prend du temps à télécharger).
+
+Dans le terminal/ligne de commande, tapez `ollama run llama3.2` pour initier ce processus.
+
+Vous pouvez aussi chosir un autre modèle, mais pour pouvoir fonctionner avec l'extention OpenRefine, il doit offrir une API de type `/chat/completions`.

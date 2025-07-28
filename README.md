@@ -8,8 +8,8 @@ Le logiciel open source OpenRefine offre une panoplie d’outils puissants pour 
 
 ### Intervenants
 
-Thomas Guignard, consultant en technologie de bibliothèque et données ouvertes, [TG Consulting](https://tgconsulting.ca/)
-Lionel Walter, ingénieur logiciel spécialisé en bibliothèques et archives, [arbim IT](https://arbim.ch/)
+- Thomas Guignard, consultant en technologie de bibliothèque et données ouvertes, [TG Consulting](https://tgconsulting.ca/)
+- Lionel Walter, ingénieur logiciel spécialisé en bibliothèques et archives, [arbim IT](https://arbim.ch/)
 
 ## Prérequis
 

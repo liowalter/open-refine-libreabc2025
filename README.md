@@ -54,9 +54,7 @@ Copiez la clé ainsi générée dans un document texte par exemple, vous en aure
 elle ne s'affichera plus une fois la fenêtre fermée.
 
 #### 2. Utiliser une IA propriétaire (payant)
-Si votre institution ou vous-même bénéficiez d'un outil IA de type ChatGPT, essayez d'obtenir une clé API vous permettant d'utiliser ces services directement en mode machine (par exemple avec ChatGPT cela se passe sur https://platform.openai.com/api-keys). C'est l'option la plus simple et la plus performante, mais payante et les données seront envoyées aux serveurs d'OpenAI hors de Suisse.
-
-Attention, un compte ChatGPT gratuit ne permet pas cette option, il faut un compte payant ou institutionnel.
+Si votre institution ou vous-même bénéficiez d'un accès à un outil IA de type ChatGPT, Copilot, etc. essayez d'obtenir une clé API vous permettant d'utiliser ces services directement en mode machine (par exemple avec ChatGPT cela se passe sur https://platform.openai.com/api-keys). C'est l'option la plus simple et la plus performante, mais payante et les données seront envoyées aux serveurs d'OpenAI hors de Suisse.
 
 #### 3. Utiliser un modèle en local sur votre machine (gratuit)
 Installer le logiciel [Ollama](https://ollama.com/) qui permet de faire tourner des modèles IA sur votre propre machine.

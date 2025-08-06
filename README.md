@@ -65,4 +65,10 @@ Cependant, la qualité du résultat et la vitesse de réponse dépendront de la 
 
 Dans le terminal/ligne de commande, tapez `ollama run llama3.2` pour initier ce processus.
 
+Alternativement, vous pouvez rechercher le modèle `llama3.2` dans le menu déroulant de l'application ollama
+(depuis la version 0.10.0 sur Mac et Windows)
+et cliquer sur la petite flèche pour télécharger le modèle sur votre machine:
+
+![Comment télécharger un modèle dans ollama](img/ollama-download-model-screenshot.png)
+
 Vous pouvez aussi chosir un autre modèle, mais pour pouvoir fonctionner avec l'extention OpenRefine, il doit offrir une API de type `/chat/completions`.

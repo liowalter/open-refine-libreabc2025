@@ -118,12 +118,13 @@ structurées au format JSON.
 Quelques conseils:
 
 * L'option "Provide JSON format" ne fonctionne pas avec tous les modèles. Il est souvent préférable d'indiquer le format de réponse désiré dans la consigne.
-* Si la réponse apparaît tronquée, vérifiez que la taille de réponse spécifiée dans les paramètres (number of tokens) est suffisante
+* Si la réponse apparaît tronquée, vérifiez que la taille de réponse spécifiée dans les paramètres (number of tokens) est suffisante.
+* Essayez d'extraire les informations directement de l'URL et laissez l'IA tenter d'extraire les informations pertinentes!
 
 <details>
-  <summary>Voir un exemple de solution...</summary>
+  <summary>Voir des exemples de solution...</summary>
   
-  La consigne suivante peut fonctionner avec Mistral:
+  Les consignes suivantes peuvent fonctionner avec Mistral:
   
   ```
 You are extracting the places of birth and death of this person and writing a very short description in English and French.
@@ -169,4 +170,22 @@ homme politique polonais
 The first word MUST NOT contain any capital letter. If you output a capital letter at the start, the answer is INVALID.
   ```
   
+  ou directement depuis l'URL:
+  
+  ```
+  From this URL, extract the information present in the section titled "Présentation du producteur".
+
+  ### Output format ###
+  Use the following JSON template to format your output.
+  Only output the required schema, with no extra punctuation or commentary.
+  {
+    "type" : "family or person"
+    "fathername" : "name of father",
+    "mothername" : "name of mother",
+    "dateofbirth" : "date of birth",
+    "dateofdeath" : "date of death"
+    "placeofbirth" : "place of birth",
+    "placeofdeath" : "place of death"
+  }
+  ```
 </details>

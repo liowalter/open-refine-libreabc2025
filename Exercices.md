@@ -70,7 +70,7 @@ A partir de l'URL vers le site de la BGE, dernière colonne, récupérer la "Pr�
 
 </details>
 
-### Exercice 1.5 :hot_pepper: :hot_pepper: :hot_pepper:
+### Exercice 1.5 Tenir compte des dates de naissance :hot_pepper: :hot_pepper: :hot_pepper:
 
 Refaire les exercies 1.1 à 1.3 en tenant compte des années de naissance
 - Url GND https://lobid.org/gnd/search?q=Maillart,+Ella+AND+dateOfBirth%3A1903*+AND+dateOfDeath%3A1997*&format=json

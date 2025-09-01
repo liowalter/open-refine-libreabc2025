@@ -6,6 +6,7 @@ Les exercices sont basés sur le jeu de données [archives-privees-bibliotheque-
 
 Pour chaque exercice, essayer d'abord sur les 10 premiers résultats pour ne pas surcharger les APIs (en mettant des étoiles puis en faisant [facet by star](https://librarycarpentry.github.io/lc-open-refine/13-looking-up-data.html#looking-up-data-from-a-url))
 
+
 ### Exercice 1.1 Reconciliation Wikidata :hot_pepper:
 
 Récupérer le lieu de naissance ([P19](https://www.wikidata.org/wiki/Property:P19)) et le lieu décès ([P20](https://www.wikidata.org/wiki/Property:P20)) depuis Wikidata avec le service de Réconciliation (nom seulement, sans les dates de naissance) pour toutes les personnes mentionnées dans le jeu de données. 
@@ -81,7 +82,7 @@ Y a-t-il une différence dans les résultats ?
 ## Partie 2 : IA
 
 Pour les exercices suivants, partir de la colonne qui contient les données "Présentation du producteur" extraites
-à partir des pages de la Bibliothèque de Genève lors de la première partie.
+à partir des pages de la Bibliothèque de Genève lors de la première partie (exercice 1.5).
 
 À défaut, importer les données du fichier [`archives-privees-bibliotheque-de-geneve-enrichies.csv`](data/archives-privees-bibliotheque-de-geneve-enrichies.csv)
 dans un nouveau projet OpenRefine et utiliser la colonne `PresentationProducteur`.

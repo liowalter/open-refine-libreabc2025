@@ -2,6 +2,82 @@
 
 ## Partie 1 : APIs
 
+Les exercices sont basés sur le jeu de données [archives-privees-bibliotheque-de-geneve.csv](https://github.com/liowalter/open-refine-libreabc2025/blob/main/data/archives-privees-bibliotheque-de-geneve.csv). Il représente les fonds d'archives qui sont disponibles sur https://archives.bge-geneve.ch/archive/catalogue/categoriefonds/personnes-et-familles/n:90.
+
+Pour chaque exercice, essayer d'abord sur les 10 premiers résultats pour ne pas surcharger les APIs (en mettant des étoiles puis en faisant [facet by star](https://librarycarpentry.github.io/lc-open-refine/13-looking-up-data.html#looking-up-data-from-a-url))
+
+### Exercice 1.1 Reconciliation Wikidata :hot_pepper:
+
+Récupérer le lieu de naissance ([P19](https://www.wikidata.org/wiki/Property:P19)) et le lieu décès ([P20](https://www.wikidata.org/wiki/Property:P20)) depuis Wikidata avec le service de Réconciliation (nom seulement, sans les dates de naissance) pour toutes les personnes mentionnées dans le jeu de données. 
+
+- Exemple personne sur Wikidata : https://www.wikidata.org/wiki/Q464376
+- Documentation : https://openrefine.org/docs/manual/reconciling 
+- Video : https://www.youtube.com/watch?v=TPiOXiX1AoI
+
+### Exercice 1.2 API GND :hot_pepper: :hot_pepper:
+
+Récupérer le lieu de naissance (placeOfBirth) et décès (placeOfDeath) depuis l'API GND Lobid.
+
+- Exemple personne sur Lobid GND : https://lobid.org/gnd/119081288
+- Doc API : https://lobid.org/gnd/api 
+- Url à utiliser : https://lobid.org/gnd/search?q=Maillart,+Ella&format=json
+
+<details>
+  <summary>Voir une solution possible...</summary>
+  ```
+  value.parseJson().member[0].placeOfBirth[0].label
+  value.parseJson().member[0].placeOfDeath[0].label
+  ```
+
+</details>
+
+
+### Exercice 1.3 Récupérer la profession via l'API GND :hot_pepper: :hot_pepper:
+
+Récupérer la première profession (professionOrOccupation)
+
+<details>
+  <summary>Voir une solution possible...</summary>
+  ```
+  value.parseJson().member[0].professionOrOccupation[0].label
+  ```
+
+</details>
+
+### Exercice 1.4 Enrichissement web :hot_pepper: :hot_pepper: :hot_pepper: :hot_pepper: 
+
+A partir de l'URL vers le site de la BGE, dernière colonne, récupérer la "Présentation du producteur" depuis le web.
+
+- Doc sur la syntaxe https://jsoup.org/cookbook/extracting-data/selector-syntax
+
+<details>
+  <summary>Voir une solution possible...</summary>
+  Après la récupération du html, il faut extraire le noeud html suivant
+
+    ```html
+    <li class="descrip_sous_titre">
+        <h6>Présentation du producteur</h6>
+        <div class="">
+            <p class="arc_firstp">Fille de Paul Maillart et de Dagmar Marie [...]</p>
+        </div>
+    </li>
+    ```
+  On y arrive en utilisant 
+
+    ```
+    value.parseHtml().select("li.descrip_sous_titre:contains(Présentation du producteur) p")[0].htmlText()
+    ```
+
+</details>
+
+### Exercice 1.5 :hot_pepper: :hot_pepper: :hot_pepper:
+
+Refaire les exercies 1.1 à 1.3 en tenant compte des années de naissance
+- Url GND https://lobid.org/gnd/search?q=Maillart,+Ella+AND+dateOfBirth%3A1903*+AND+dateOfDeath%3A1997*&format=json
+
+Y a-t-il une différence dans les résultats ?
+
+
 ## Partie 2 : IA
 
 Pour les exercices suivants, partir de la colonne qui contient les données "Présentation du producteur" extraites

@@ -97,8 +97,12 @@ dans un nouveau projet OpenRefine et utiliser la colonne `PresentationProducteur
   
 #### Mistral via l'API d'Infomaniak:
   
-  ![Comment configurer l'IA d'Infomaniak dans l'extension OpenRefine](img/settings-infomaniak.png)
+![Comment configurer l'IA d'Infomaniak dans l'extension OpenRefine](img/settings-infomaniak.png)
   
+#### Apertus via l'API de PublicAI
+
+![Comment configurer l'IA Apertus dans l'extension OpenRefine](img/settings-apertus.png)
+
 #### Ollama en local:
   
   ![Comment configurer Ollama dans l'extension OpenRefine](img/settings-ollama-local.png)

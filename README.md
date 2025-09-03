@@ -71,4 +71,12 @@ et cliquer sur la petite flèche pour télécharger le modèle sur votre machine
 
 ![Comment télécharger un modèle dans ollama](img/ollama-download-model-screenshot.png)
 
+#### 4. NOUVEAU: Utiliser la nouvelle IA souveraine suisse Apertus
+Apertus est un nouveau modèle d'IA suisse développé par l'EPFL et l'ETH qui est 
+[disponible au public depuis le 2 septembre 2025](https://actu.epfl.ch/news/apertus-un-modele-de-langage-multilingue-ouvert-et/).
+
+Pour l'utiliser, il faut se créer un compte sur la plateforme [PublicAI](https://platform.publicai.co/docs) (gratuit)
+et générer une clé API. Celle-ci donne accès à 20 requêtes par minute maximum durant les 
+[Swiss {ai} weeks](https://swiss-ai-weeks.ch/) du 1er septembre au 5 octobre 2025.
+
 Vous pouvez aussi chosir un autre modèle, mais pour pouvoir fonctionner avec l'extention OpenRefine, il doit offrir une API de type `/chat/completions`.

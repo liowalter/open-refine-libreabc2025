@@ -25,6 +25,7 @@ Récupérer le lieu de naissance (placeOfBirth) et décès (placeOfDeath) depuis
 
 <details>
   <summary>Voir une solution possible...</summary>
+  
   ```
   value.parseJson().member[0].placeOfBirth[0].label
   value.parseJson().member[0].placeOfDeath[0].label
@@ -39,6 +40,7 @@ Récupérer la première profession (professionOrOccupation)
 
 <details>
   <summary>Voir une solution possible...</summary>
+  
   ```
   value.parseJson().member[0].professionOrOccupation[0].label
   ```
@@ -54,20 +56,21 @@ A partir de l'URL vers le site de la BGE, dernière colonne, récupérer la "Pr�
 <details>
   <summary>Voir une solution possible...</summary>
   Après la récupération du html, il faut extraire le noeud html suivant
-
-    ```html
+  
+  ```html
     <li class="descrip_sous_titre">
         <h6>Présentation du producteur</h6>
         <div class="">
             <p class="arc_firstp">Fille de Paul Maillart et de Dagmar Marie [...]</p>
         </div>
     </li>
-    ```
+  ```
+
   On y arrive en utilisant 
 
-    ```
-    value.parseHtml().select("li.descrip_sous_titre:contains(Présentation du producteur) p")[0].htmlText()
-    ```
+  ```
+  value.parseHtml().select("li.descrip_sous_titre:contains(Présentation du producteur) p")[0].htmlText()
+  ```
 
 </details>
 

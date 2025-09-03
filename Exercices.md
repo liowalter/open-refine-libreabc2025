@@ -90,7 +90,7 @@ Pour les exercices suivants, partir de la colonne qui contient les données "Pr�
 À défaut, importer les données du fichier [`archives-privees-bibliotheque-de-geneve-enrichies.csv`](data/archives-privees-bibliotheque-de-geneve-enrichies.csv)
 dans un nouveau projet OpenRefine et utiliser la colonne `PresentationProducteur`.
 
-### Ajouter un modèle d'IA à OpenRefine
+### Ajouter un modèle d'IA à OpenRefine :hot_pepper:
 
 * Vérifier que l'extension [AI Extension for OpenRefine](https://github.com/sunilnatraj/llm-extension) est bien installée
 * Ajouter au moins un modèle à choix, soit via une API externe, soit via l'API interne d'Ollama.
@@ -124,7 +124,7 @@ dans un nouveau projet OpenRefine et utiliser la colonne `PresentationProducteur
   Noter que le bouton "Test service" ne fonctionne souvent pas!
 </details>
 
-### Extraire le lieu de naissance et le lieu de mort des producteurs
+### Extraire le lieu de naissance et le lieu de mort des producteurs :hot_pepper:
 
 Utiliser l'extension AI pour extraire ces informations du bloc de texte "Présentation du producteur".
 
@@ -145,7 +145,7 @@ Quelques conseils:
   
 </details>
 
-### Générer une courte description pour Wikidata de chaque producteur
+### Générer une courte description pour Wikidata de chaque producteur :hot_pepper: :hot_pepper:
 
 Utiliser l'extension AI pour convertir la "Présentation du producteur" en une courte description conforme
 [aux standards Wikidata](https://www.wikidata.org/wiki/Help:Description/fr).
@@ -194,7 +194,7 @@ Quelques conseils:
   
 </details>
 
-### Générer des informations structurées en JSON
+### Générer des informations structurées en JSON :hot_pepper: :hot_pepper: :hot_pepper:
 
 Utiliser l'extension AI pour combiner les informations extraites aux étapes précédentes en un seul bloc de données
 structurées au format JSON.

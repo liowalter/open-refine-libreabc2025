@@ -90,7 +90,7 @@ Pour les exercices suivants, partir de la colonne qui contient les données "Pr�
 À défaut, importer les données du fichier [`archives-privees-bibliotheque-de-geneve-enrichies.csv`](data/archives-privees-bibliotheque-de-geneve-enrichies.csv)
 dans un nouveau projet OpenRefine et utiliser la colonne `PresentationProducteur`.
 
-### Ajouter un modèle d'IA à OpenRefine :hot_pepper:
+### Exercice 2.1 Ajouter un modèle d'IA à OpenRefine :hot_pepper:
 
 * Vérifier que l'extension [AI Extension for OpenRefine](https://github.com/sunilnatraj/llm-extension) est bien installée
 * Ajouter au moins un modèle à choix, soit via une API externe, soit via l'API interne d'Ollama.
@@ -105,6 +105,26 @@ Vous trouverez l'URL de l'API dans la console Infomaniak. Elle ressemble à cela
 ```
 https://api.infomaniak.com/1/ai/VOTREPRODUCTID/openai/chat/completions
 ```
+
+Attention, le nom exact du modèle est nécessaire, et il n'est pas nécessairement affiché sur la console Infomaniak. Voici les valeurs possibles (au 9 septembre 2025):
+
+```
+whisper
+llama3
+photomaker
+whisperV2
+flux
+granite
+bge_multilingual_gemma2
+mini_lm_l12_v2
+reasoning
+mistral24b
+mistral3
+qwen3
+gemma3n
+```
+
+La liste des modèles disponibles est disponible via l'API suivante (nécessite également une authentification): `https://api.infomaniak.com/1/ai/models`
   
 ![Comment configurer l'IA d'Infomaniak dans l'extension OpenRefine](img/settings-infomaniak.png)
   
@@ -144,7 +164,7 @@ Pour voir la liste des modèles disponibles, taper `ollama list` dans un termina
   Noter que le bouton "Test service" ne fonctionne souvent pas!
 </details>
 
-### Extraire le lieu de naissance et le lieu de mort des producteurs :hot_pepper:
+### Exercice 2.2 Extraire le lieu de naissance et le lieu de mort des producteurs :hot_pepper:
 
 Utiliser l'extension AI pour extraire ces informations du bloc de texte "Présentation du producteur".
 
@@ -165,7 +185,7 @@ Quelques conseils:
   
 </details>
 
-### Générer une courte description pour Wikidata de chaque producteur :hot_pepper: :hot_pepper:
+### Exercice 2.3 Générer une courte description pour Wikidata de chaque producteur :hot_pepper: :hot_pepper:
 
 Utiliser l'extension AI pour convertir la "Présentation du producteur" en une courte description conforme
 [aux standards Wikidata](https://www.wikidata.org/wiki/Help:Description/fr).
@@ -214,7 +234,7 @@ Quelques conseils:
   
 </details>
 
-### Générer des informations structurées en JSON :hot_pepper: :hot_pepper: :hot_pepper:
+### Exercice 2.4 Générer des informations structurées en JSON :hot_pepper: :hot_pepper: :hot_pepper:
 
 Utiliser l'extension AI pour combiner les informations extraites aux étapes précédentes en un seul bloc de données
 structurées au format JSON.

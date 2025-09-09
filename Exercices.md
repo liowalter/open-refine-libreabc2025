@@ -99,18 +99,38 @@ dans un nouveau projet OpenRefine et utiliser la colonne `PresentationProducteur
   <summary>Voir quelques exemples de configuration...</summary>
   
 #### Mistral via l'API d'Infomaniak:
+
+Vous trouverez l'URL de l'API dans la console Infomaniak. Elle ressemble à cela
+
+```
+https://api.infomaniak.com/1/ai/VOTREPRODUCTID/openai/chat/completions
+```
   
 ![Comment configurer l'IA d'Infomaniak dans l'extension OpenRefine](img/settings-infomaniak.png)
   
 #### Apertus via l'API de PublicAI
 
+L'URL à utiliser se trouve dans la documentation, elle ressemble à cela
+
+```
+https://api.publicai.co/v1/chat/completions
+```
+
 ![Comment configurer l'IA Apertus dans l'extension OpenRefine](img/settings-apertus.png)
 
 #### Ollama en local:
+
+Ollama expose son API sur le port `11434` par défaut. Si vous n'avez pas modifié ce réglage, l'API sera donc disponible à
+
+```
+http://localhost:11434/v1/chat/completions
+http://127.0.0.1:11434/v1/chat/completions  # Alternative à localhost
+```
+Il peut être utile de tester l'API dans un navigateur pour vérifier qu'Ollama fonctionne bien, par exemple en visitant `http://127.0.0.1:11434/v1/models`. Si on obtient une erreur de connexion, cela peut signifier qu'Ollama n'a pas démarré. Simplement lancer l'application Ollama ou taper `ollama list` dans un terminal, ce qui forcera Ollama à démarrer.
+
+![Comment configurer Ollama dans l'extension OpenRefine](img/settings-ollama-local.png)
   
-  ![Comment configurer Ollama dans l'extension OpenRefine](img/settings-ollama-local.png)
-  
-  Pour voir la liste des modèles disponibles, taper `ollama list` dans un terminal. Pour installer un nouveau modèle, il suffit de le lancer avec p.ex. `ollama run llama3.2`. Cela donne quelque chose comme
+Pour voir la liste des modèles disponibles, taper `ollama list` dans un terminal. Pour installer un nouveau modèle, il suffit de le lancer avec p.ex. `ollama run llama3.2`. Cela donne quelque chose comme
   
   ```
   NAME                  ID              SIZE      MODIFIED    
